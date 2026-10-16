@@ -5,7 +5,7 @@
 ; ============================================================
 
 #define MyAppName "قيد للمحاسبة والأنظمة الرقمية"
-#define MyAppVersion "1.0.1"
+#define MyAppVersion "1.0.2"
 #define MyAppPublisher "قيد للمحاسبة والأنظمة الرقمية"
 #define MyAppURL "https://qayd.ye"
 

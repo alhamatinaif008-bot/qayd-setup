@@ -16,6 +16,11 @@ jobs:
         run: |
           Expand-Archive -Path components\php.zip -DestinationPath components\php
           Expand-Archive -Path components\mariadb.zip -DestinationPath components\mariadb
+          # Flatten: mariadb.zip nests everything under mariadb-11.4.13-winx64/
+          # but the launcher expects binaries directly in components\mariadb\bin\
+          $inner = Get-ChildItem components\mariadb -Directory | Select-Object -First 1
+          Get-ChildItem $inner.FullName | Move-Item -Destination components\mariadb\
+          Remove-Item $inner.FullName
 
       - name: Install Inno Setup
         run: choco install innosetup -y --no-progress
