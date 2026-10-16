@@ -1,0 +1,776 @@
+/* ==========================================================================
+   QAYD LUXURY THEME for FrontAccounting — Oracle Heavy × Navy × Gold
+   كحلي عميق × ذهبي فاخر — كثافة أوراكل
+   ========================================================================== */
+
+body {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	background: #e9edf3;
+	color: #1a2332;
+	margin: 0;
+	padding: 0;
+}
+tr, td, th {
+	padding: 2px 6px;
+	line-height: 22px; /* كثافة أوراكل */
+}
+table { border-collapse: collapse; }
+textarea {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	border: 1px solid #b9c4d4;
+	border-radius: 3px;
+	padding: 4px;
+	background: #fff;
+}
+input, select {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	border: 1px solid #b9c4d4;
+	border-radius: 3px;
+	padding: 3px 6px;
+	background: #fff;
+	height: 24px;
+	box-sizing: border-box;
+}
+select { height: 26px; }
+input:focus, select:focus, textarea:focus {
+	border-color: #c9a227;
+	outline: none;
+	box-shadow: 0 0 4px rgba(201,162,39,.45);
+}
+option.inactive { color: #999; }
+input.big { font-size: 14px; }
+input.small { font-size: 11px; }
+
+a { color: #0f2242; text-decoration: none; }
+a:link { color: #0f2242; }
+a:active { color: #c9a227; }
+a:hover, a:focus { color: #8a6d1a; text-decoration: underline; }
+.inactive { color: #999; }
+
+button {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	background: linear-gradient(to bottom, #1a3a6b, #0f2242);
+	color: #fff;
+	border: 1px solid #c9a227;
+	border-radius: 4px;
+	padding: 5px 14px;
+	cursor: pointer;
+	font-weight: bold;
+}
+button:hover {
+	background: linear-gradient(to bottom, #c9a227, #a8861c);
+	color: #0a1628;
+	border-color: #0f2242;
+}
+button img, button span { vertical-align: middle; }
+
+/* ===== الإطار الرئيسي ===== */
+.callout_main {
+	background: #0a1628;
+	border-bottom: 3px solid #c9a227;
+	width: 100%;
+}
+.main_page {
+	background: #e9edf3;
+	width: 100%;
+}
+
+/* ===== تبويبات القائمة العلوية ===== */
+.quick_menu {
+	background: linear-gradient(to bottom, #12294d, #0a1628);
+	padding: 0;
+}
+.quick_menu a, div.tabs a {
+	color: #d7e0f0 !important;
+	font-weight: bold;
+	padding: 10px 18px;
+	display: inline-block;
+	text-decoration: none !important;
+	border-left: 1px solid rgba(255,255,255,.08);
+}
+.quick_menu a:hover, div.tabs a:hover {
+	color: #e3c566 !important;
+	background: rgba(201,162,39,.12);
+}
+.quick_menu_selected, div.tabs a.selected {
+	background: linear-gradient(to bottom, #c9a227, #a8861c) !important;
+	color: #0a1628 !important;
+	border-bottom: 3px solid #e3c566;
+}
+
+/* ===== شريط المستخدم ===== */
+.logoutBar {
+	background: #0a1628;
+	color: #d7e0f0;
+	padding: 6px 12px;
+	border-bottom: 1px solid #c9a227;
+}
+div.logoutBar a { color: #e3c566 !important; font-weight: bold; }
+div.logoutBar a:hover { color: #fff !important; }
+div.logoutBar img { vertical-align: middle; }
+.logoutBarRight { text-align: left; color: #d7e0f0; }
+
+.bottomBar {
+	background: #0a1628;
+	color: #8fa0bd;
+	border-top: 2px solid #c9a227;
+}
+.bottomBarCell { padding: 6px 12px; color: #8fa0bd; }
+.bottomBar2 { background: #060d1a; }
+
+/* ===== مجموعات القائمة (كتل أوراكل) ===== */
+.menu_group {
+	background: linear-gradient(to left, #0f2242, #1a3a6b);
+	color: #fff;
+	font-weight: bold;
+	padding: 8px 14px;
+	border-right: 4px solid #c9a227;
+	border-radius: 0 6px 6px 0;
+	margin: 10px 4px 4px 4px;
+	box-shadow: 0 2px 6px rgba(10,22,40,.25);
+}
+.menu_group_items {
+	background: #fff;
+	border: 1px solid #d4dbe6;
+	border-top: none;
+	margin: 0 4px 8px 4px;
+	padding: 6px 10px;
+	border-radius: 0 0 6px 6px;
+}
+.menu_group_items a {
+	display: block;
+	padding: 3px 6px;
+	border-radius: 3px;
+}
+.menu_group_items a:hover {
+	background: #faf6e9;
+	text-decoration: none;
+}
+
+#hotkeyshelp { padding: 10px; }
+#footer { background: #0a1628; }
+.footer { background: #0a1628; color: #8fa0bd; padding: 8px; }
+.footer td a { color: #e3c566; }
+
+/* ===== رؤوس الجداول ===== */
+.tableheader {
+	background: linear-gradient(to bottom, #1a3a6b, #0f2242);
+	color: #fff;
+	font-weight: bold;
+	border-bottom: 2px solid #c9a227;
+	padding: 7px 8px;
+}
+.tableheader2 {
+	background: linear-gradient(to bottom, #243d6e, #12294d);
+	color: #e3c566;
+	font-weight: bold;
+	border-bottom: 2px solid #c9a227;
+	padding: 6px 8px;
+}
+.titletext {
+	color: #0f2242;
+	font-weight: bold;
+	border-bottom: 2px solid #c9a227;
+	padding-bottom: 4px;
+	margin-bottom: 8px;
+}
+.headingtext { color: #0f2242; font-weight: bold; }
+.headingtext2 { color: #8a6d1a; font-weight: bold; }
+.headingtext3 { color: #0f2242; }
+.errortext { color: #b00020; font-weight: bold; }
+
+/* ===== الأزرار ===== */
+.inputsubmit, .ajaxsubmit {
+	background: linear-gradient(to bottom, #1a3a6b, #0f2242);
+	color: #fff;
+	border: 1px solid #c9a227;
+	border-radius: 4px;
+	padding: 6px 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.inputsubmit:hover, .ajaxsubmit:hover {
+	background: linear-gradient(to bottom, #c9a227, #a8861c);
+	color: #0a1628;
+}
+.listsubmit { display: none; }
+
+/* ===== صفوف الجداول ===== */
+.oddrow { background: #f7f9fc; }
+.evenrow { background: #ffffff; }
+tr.oddrow:hover td, tr.evenrow:hover td { background: #faf6e9; }
+.overduebg { background: #ffe9e9; }
+.overduefg { color: #b00020; font-weight: bold; }
+.currentfg { color: #0f7a3d; }
+.redfg, a.redfg { color: #b00020; }
+.settledbg { background: #e9f7ee; }
+.settledfg { color: #0f7a3d; }
+.inquirybg { background: #faf6e9; }
+.currencybg { background: #f0f4fa; }
+.stockmankobg { background: #fff; }
+.stockmankofg { color: #0f2242; }
+
+/* ===== الجداول ===== */
+table.tablestyle {
+	border-collapse: collapse;
+	border: 1px solid #c9a227;
+	box-shadow: 0 2px 8px rgba(10,22,40,.12);
+}
+table.tablestyle td {
+	border-collapse: collapse;
+	border: 1px solid #dfe4ee;
+}
+table.tablestyle2 {
+	border-collapse: collapse;
+	border: 1px solid #c9a227;
+}
+table.tablestyle2 td {
+	border-collapse: collapse;
+	border: 1px solid #dfe4ee;
+}
+table.tablestyle_inner { border-collapse: collapse; border: 1px solid #f0f0f0; }
+table.tablestyle_inner td { border-collapse: collapse; border: 1px solid #f0f0f0; }
+.tablestyle_noborder { padding: 3px; }
+
+.label {
+	background: #eef1f6;
+	color: #0f2242;
+	font-weight: bold;
+	border-left: 3px solid #c9a227;
+}
+
+/* ===== شاشة الدخول ===== */
+#loginscreen {
+	background: radial-gradient(ellipse at center, #12294d 0%, #060d1a 100%);
+	min-height: 100vh;
+}
+.login {
+	width: 380px;
+	border: 1px solid #c9a227;
+	border-top: 5px solid #c9a227;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 10px 40px rgba(0,0,0,.5);
+	margin: 60px auto;
+}
+.login td.tableheader {
+	line-height: 44px;
+	background: linear-gradient(to bottom, #12294d, #0a1628);
+	color: #e3c566;
+	font-size: 16px;
+	border: none;
+	text-align: center;
+}
+.login select, .login input[type=text], .login input[type=password] {
+	height: 32px;
+	width: 240px;
+	padding: 4px 8px;
+	box-sizing: border-box;
+	border: 1px solid #b9c4d4;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.login input[type=button], .login input[type=submit] {
+	background: linear-gradient(to bottom, #c9a227, #a8861c);
+	border: none;
+	border-radius: 4px;
+	color: #0a1628;
+	font-weight: bold;
+	padding: 10px 30px;
+	cursor: pointer;
+	font-size: 14px;
+}
+.login input[type=button]:hover, .login input[type=submit]:hover {
+	background: linear-gradient(to bottom, #e3c566, #c9a227);
+}
+
+/* ===== المبالغ ===== */
+.amount {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	text-align: right;
+	font-weight: bold;
+	color: #0f2242;
+}
+input.amount { padding-left: 4px; }
+
+.editbutton {
+	color: #0f2242;
+	background-color: transparent;
+	border: 1px solid #c9a227;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 2px 8px;
+	font-size: 11px;
+}
+.editbutton:hover { background: #faf6e9; }
+
+.navibutton[disabled], .navibutton[disabled] span {
+	color: #808080;
+	text-decoration: none;
+	cursor: auto;
+}
+button.navibutton {
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	font-size: 11px;
+	font-weight: bold;
+	color: #0f2242;
+	padding: 2px 8px;
+	background: #eef1f6;
+	border: 1px solid #b9c4d4;
+	border-radius: 3px;
+	cursor: pointer;
+}
+button.navibutton:hover { border-color: #c9a227; background: #faf6e9; }
+.navibutton span { text-decoration: none; }
+.navibar {
+	padding: 4px 8px;
+	color: #0f2242;
+	border-collapse: collapse;
+	background: #eef1f6;
+	border: 1px solid #d4dbe6;
+	border-radius: 4px;
+}
+.navibar tr td { border: none; }
+
+/* ===== تبويبات أجاكس ===== */
+ul.ajaxtabs {
+	padding: 3px 0 0 0;
+	margin: 3px 3px 0 3px;
+	font: bold 12px Tahoma, Verdana;
+}
+ul.ajaxtabs li { list-style: none; margin: 0; display: inline; }
+ul.ajaxtabs li button {
+	background: #dfe4ee;
+	color: #0f2242;
+	padding: 6px 14px;
+	margin: 0 2px;
+	border: 1px solid #b9c4d4;
+	border-bottom: none;
+	border-radius: 6px 6px 0 0;
+	font-weight: bold;
+}
+ul.ajaxtabs li button:hover { color: #8a6d1a; background: #faf6e9; }
+ul.ajaxtabs li button.current, ul.ajaxtabs li button.current:hover {
+	background: linear-gradient(to bottom, #1a3a6b, #0f2242);
+	color: #e3c566;
+	border-color: #c9a227;
+}
+div.spaceBox {
+	background: #0f2242;
+	height: 4px;
+	border-bottom: 2px solid #c9a227;
+	margin: 0 3px;
+}
+div.contentBox {
+	border: 1px solid #c9a227;
+	border-top: none;
+	margin: 0 3px 3px 3px;
+	background: #fff;
+}
+
+#hints {
+	font-size: 13px;
+	padding: 8px;
+	border: 1px solid #c9a227;
+	background: #faf6e9;
+	color: #5a4a12;
+	border-radius: 4px;
+	margin: 6px 2px;
+}
+
+/* ===== التقويم ===== */
+#CCIframe { display: none; left: 0; position: absolute; top: 0; height: 250px; width: 270px; z-index: 99; }
+#CC { position: absolute; background: #FFF; margin: 0; padding: 0; display: none; z-index: 100; }
+#CC table { font-family: Tahoma, Arial, sans-serif; font-size: 8pt; border: 1px solid #0f2242; }
+#CC th { font-weight: normal; text-align: center; }
+#CC th a { font-weight: normal; text-decoration: none; color: #FFF; padding: 1px; }
+#CC td { text-align: center; }
+#CC .header { background: #0f2242; }
+#CC .weekday { background: #eee; color: #000; }
+#CC .weekend { background: #faf6e9; color: #000; }
+#CC .weekno { background: #dfe4ee; color: #555; }
+#CC .current { border: 1px solid #c9a227; background: #0f2242; color: #e3c566; }
+#CC .weekday, #CC .weekend, #CC .current { display: block; text-decoration: none; border: 1px solid #FFF; width: 2em; }
+#CC .weekday:hover, #CC .weekend:hover, #CC .current:hover { color: #0a1628; background: #e3c566; border: 1px solid #999; }
+#CC .previous { text-align: left; }
+#CC .next { text-align: right; }
+#CC .previous, #CC .next { padding: 1px 3px; font-size: 1.4em; }
+#CC .previous a, #CC .next a { color: #FFF; text-decoration: none; font-weight: bold; }
+#CC .title { text-align: center; font-weight: bold; color: #e3c566; }
+#CC .empty { background: #ddd; border: 1px solid #FFF; }
+
+/* ===== الرسائل ===== */
+div.err_msg {
+	margin: 10px; padding: 8px;
+	border: 1px solid #b00020; border-right: 4px solid #b00020;
+	background: #ffebee; color: #b00020;
+	text-align: center; border-radius: 4px;
+}
+div.warn_msg {
+	margin: 10px; padding: 8px;
+	border: 1px solid #c9a227; border-right: 4px solid #c9a227;
+	background: #faf6e9; color: #5a4a12;
+	text-align: center; border-radius: 4px;
+}
+div.note_msg {
+	margin: 10px; padding: 8px;
+	border: 1px solid #0f7a3d; border-right: 4px solid #0f7a3d;
+	background: #e9f7ee; color: #0f7a3d;
+	text-align: center; border-radius: 4px;
+}
+
+#title { margin-bottom: 10px; width: 100%; }
+
+/* ===== أحجام الشاشات ===== */
+@media screen and (min-width: 1024px) {
+	body, .headingtext3 { font-size: 11px; }
+	textarea { font-size: 13px; }
+	tr, td, th, input, select, a, button, .inputsubmit, .ajaxsubmit, .amount, button.navibutton { font-size: 12px; }
+	.quick_menu_selected, .menu_group, .titletext, .headingtext, .headingtext2, .errortext, #hints { font-size: 14px; }
+	.bottomBarCell { font-size: 11px; line-height: 13px; }
+	.footer, .footer td a { font-size: 10px; }
+	#CC table { font-size: 9pt; }
+	#CC .previous, #CC .next { font-size: 1.4em; }
+}
+@media screen and (min-width: 1200px) {
+	body, .headingtext3 { font-size: 12px; }
+	textarea { font-size: 14px; }
+	tr, td, th, input, select, a, button, .inputsubmit, .ajaxsubmit, .amount, button.navibutton { font-size: 13px; }
+	.quick_menu_selected, .menu_group, .titletext, .headingtext, .headingtext2, .errortext, #hints { font-size: 15px; }
+	.bottomBarCell { font-size: 12px; line-height: 14px; }
+	.footer, .footer td a { font-size: 11px; }
+	#CC table { font-size: 10pt; }
+	#CC .previous, #CC .next { font-size: 1.4em; }
+}
+
+/* ===== غرفة قيادة قيد ===== */
+.qayd-kpis {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 12px 14px 4px 14px;
+	background: linear-gradient(to bottom, #0f2242, #0a1628);
+	border-bottom: 3px solid #c9a227;
+}
+.qayd-kpi {
+	flex: 1 1 150px;
+	min-width: 150px;
+	background: rgba(255,255,255,.06);
+	border: 1px solid #c9a227;
+	border-radius: 6px;
+	padding: 10px 12px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.qayd-kpi-icon {
+	color: #e3c566;
+	font-size: 20px;
+}
+.qayd-kpi-val {
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	direction: ltr;
+	text-align: right;
+}
+.qayd-kpi-lbl {
+	color: #b9c6dd;
+	font-size: 12px;
+}
+.qayd-modules {
+	padding: 12px 14px 20px 14px;
+	background: #e9edf3;
+}
+.qayd-module {
+	background: #fff;
+	border: 1px solid #d4dbe6;
+	border-top: 3px solid #c9a227;
+	border-radius: 6px;
+	margin-bottom: 14px;
+	box-shadow: 0 2px 8px rgba(10,22,40,.10);
+	overflow: hidden;
+}
+.qayd-module-head {
+	background: linear-gradient(to left, #0f2242, #1a3a6b);
+	color: #e3c566;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 9px 16px;
+	border-bottom: 2px solid #c9a227;
+}
+.qayd-tiles {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 8px;
+	padding: 12px 14px;
+}
+.qayd-tile {
+	display: block;
+	background: #f7f9fc;
+	border: 1px solid #d4dbe6;
+	border-right: 4px solid #0f2242;
+	border-radius: 4px;
+	padding: 9px 12px;
+	color: #0f2242 !important;
+	font-weight: bold;
+	text-decoration: none !important;
+	transition: all .15s;
+}
+.qayd-tile:hover {
+	background: #0f2242;
+	color: #e3c566 !important;
+	border-right-color: #c9a227;
+	text-decoration: none !important;
+}
+.qayd-tile-tx { display: block; }
+
+/* ===== القائمة البحثية المنبثقة (قيد) ===== */
+.qayd-pop {
+	background: #fff;
+	border: 2px solid #c9a227;
+	border-radius: 6px;
+	box-shadow: 0 12px 40px rgba(10,22,40,.45);
+	z-index: 99999;
+	overflow: hidden;
+	direction: rtl;
+}
+.qayd-pop-search {
+	width: 100%;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 2px solid #c9a227;
+	padding: 10px 14px;
+	font-size: 14px;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	background: #faf6e9;
+	color: #0f2242;
+	outline: none;
+	height: 40px;
+}
+.qayd-pop-list {
+	max-height: 260px;
+	overflow-y: auto;
+	background: #fff;
+}
+.qayd-pop-item {
+	padding: 8px 14px;
+	cursor: pointer;
+	border-bottom: 1px solid #eef1f6;
+	color: #0f2242;
+	font-size: 13px;
+}
+.qayd-pop-item.hi {
+	background: #0f2242;
+	color: #e3c566;
+	font-weight: bold;
+}
+.qayd-pop-empty {
+	padding: 16px;
+	text-align: center;
+	color: #999;
+}
+.qayd-pop-foot {
+	background: #0f2242;
+	color: #8fa0bd;
+	font-size: 11px;
+	padding: 5px 14px;
+	text-align: center;
+}
+.qayd-dropbtn {
+	background: linear-gradient(to bottom, #1a3a6b, #0f2242);
+	color: #e3c566;
+	border: 1px solid #c9a227;
+	border-radius: 3px;
+	padding: 2px 8px;
+	margin-right: 4px;
+	cursor: pointer;
+	font-size: 11px;
+	vertical-align: middle;
+}
+.qayd-dropbtn:hover {
+	background: linear-gradient(to bottom, #c9a227, #a8861c);
+	color: #0a1628;
+}
+#qayd-keys-hint {
+	background: #0f2242;
+	color: #e3c566;
+	padding: 6px 14px;
+	font-size: 12px;
+	border-bottom: 2px solid #c9a227;
+}
+#qayd-keys-hint kbd {
+	background: #c9a227;
+	color: #0a1628;
+	border-radius: 3px;
+	padding: 1px 7px;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-weight: bold;
+	margin: 0 2px;
+}
+
+/* ===== شريط أوامر قيد (مثل أوراكل) ===== */
+#qayd-cmdbar {
+	position: sticky;
+	top: 0;
+	z-index: 9000;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	align-items: center;
+	background: linear-gradient(to bottom, #12294d, #0a1628);
+	border-bottom: 3px solid #c9a227;
+	padding: 8px 14px;
+	box-shadow: 0 4px 12px rgba(10,22,40,.35);
+}
+.qayd-cmd-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
+	background: rgba(255,255,255,.07);
+	color: #fff;
+	border: 1px solid #c9a227;
+	border-radius: 5px;
+	padding: 7px 14px;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all .15s;
+}
+.qayd-cmd-btn:hover {
+	background: linear-gradient(to bottom, #c9a227, #a8861c);
+	color: #0a1628;
+}
+.qayd-cmd-btn.disabled {
+	opacity: .35;
+	cursor: not-allowed;
+}
+.qayd-cmd-btn.disabled:hover {
+	background: rgba(255,255,255,.07);
+	color: #fff;
+}
+.qayd-cmd-ico { font-size: 15px; }
+
+/* ===== نافذة المعاينة ===== */
+#qayd-preview {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(10,22,40,.65);
+	z-index: 99998;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	direction: rtl;
+}
+.qayd-pv-box {
+	background: #fff;
+	border: 2px solid #c9a227;
+	border-radius: 8px;
+	width: 640px;
+	max-width: 92vw;
+	max-height: 86vh;
+	overflow: auto;
+	box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.qayd-pv-head {
+	background: linear-gradient(to left, #0f2242, #1a3a6b);
+	color: #e3c566;
+	font-weight: bold;
+	font-size: 15px;
+	padding: 12px 18px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #c9a227;
+}
+.qayd-pv-x {
+	background: none;
+	border: none;
+	color: #e3c566;
+	font-size: 18px;
+	cursor: pointer;
+}
+.qayd-pv-body { padding: 16px 20px; }
+.qayd-pv-meta {
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+	margin-bottom: 14px;
+	color: #0f2242;
+	font-size: 13px;
+}
+.qayd-pv-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+.qayd-pv-table th {
+	background: #0f2242;
+	color: #fff;
+	padding: 7px 8px;
+	border-bottom: 2px solid #c9a227;
+}
+.qayd-pv-table td {
+	border: 1px solid #dfe4ee;
+	padding: 6px 8px;
+	color: #1a2332;
+}
+.qayd-pv-table tr:nth-child(even) td { background: #f7f9fc; }
+.qayd-pv-empty {
+	text-align: center;
+	color: #999;
+	padding: 20px;
+}
+.qayd-pv-grand {
+	text-align: left;
+	margin-top: 12px;
+	font-size: 16px;
+	color: #0f2242;
+	border-top: 2px solid #c9a227;
+	padding-top: 8px;
+}
+.qayd-pv-foot {
+	padding: 12px 20px;
+	text-align: center;
+	border-top: 1px solid #dfe4ee;
+}
+.qayd-pv-print {
+	background: linear-gradient(to bottom, #c9a227, #a8861c);
+	border: none;
+	border-radius: 4px;
+	color: #0a1628;
+	font-weight: bold;
+	padding: 9px 26px;
+	cursor: pointer;
+	font-size: 14px;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+/* ===== شعار قيد في صفحة الدخول ===== */
+.qayd-login-logo {
+	font-size: 52px;
+	font-weight: bold;
+	color: #e3c566;
+	text-align: center;
+	padding: 18px 0 2px 0;
+	letter-spacing: 2px;
+	text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+.qayd-login-sub {
+	color: #8fa0bd;
+	text-align: center;
+	font-size: 13px;
+	padding-bottom: 14px;
+}
+/* عنوان القائمة المنبثقة */
+.qayd-pop-title {
+	background: linear-gradient(to left, #0f2242, #1a3a6b);
+	color: #e3c566;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 7px 14px;
+	border-bottom: 2px solid #c9a227;
+}

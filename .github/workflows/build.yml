@@ -1,0 +1,33 @@
+name: Build Qayd Setup
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract portable components
+        shell: pwsh
+        run: |
+          Expand-Archive -Path components\php.zip -DestinationPath components\php
+          Expand-Archive -Path components\mariadb.zip -DestinationPath components\mariadb
+
+      - name: Install Inno Setup
+        run: choco install innosetup -y --no-progress
+
+      - name: Compile installer
+        shell: pwsh
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+          Get-ChildItem dist\
+
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: Qayd-Setup
+          path: dist\Qayd-Setup-*.exe
