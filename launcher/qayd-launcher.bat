@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 REM ============================================================
 REM  قيد للمحاسبة والأنظمة الرقمية - المشغّل
 REM  يشغّل قاعدة البيانات وسيرفر الويب ويفتح النظام
@@ -6,7 +7,9 @@ REM  المنافذ: قاعدة البيانات 3307 - الويب 8082 (لا ت
 REM ============================================================
 setlocal
 
-set QAYD_ROOT=%~dp0..
+REM مجلد التثبيت = مجلد هذا الملف (بدون شرطة مائلة زائدة)
+set "QAYD_ROOT=%~dp0"
+if "%QAYD_ROOT:~-1%"=="\" set "QAYD_ROOT=%QAYD_ROOT:~0,-1%"
 set PHP_DIR=%QAYD_ROOT%\components\php
 set DB_DIR=%QAYD_ROOT%\components\mariadb
 set APP_DIR=%QAYD_ROOT%\app

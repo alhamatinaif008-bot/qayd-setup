@@ -1,11 +1,14 @@
 @echo off
+chcp 65001 >nul
 REM ============================================================
 REM  قيد - إعداد أول تشغيل
 REM  يُنفّذ مرة واحدة: تهيئة قاعدة البيانات وإنشاء الشركة
 REM ============================================================
 setlocal
 
-set QAYD_ROOT=%~dp0..
+REM مجلد التثبيت = مجلد هذا الملف (بدون شرطة مائلة زائدة)
+set "QAYD_ROOT=%~dp0"
+if "%QAYD_ROOT:~-1%"=="\" set "QAYD_ROOT=%QAYD_ROOT:~0,-1%"
 set DB_DIR=%QAYD_ROOT%\components\mariadb
 set DB_PORT=3307
 set SETUP_DIR=%QAYD_ROOT%\setup
